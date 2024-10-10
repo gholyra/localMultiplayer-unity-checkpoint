@@ -8,7 +8,7 @@ public class InputManager : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance == null) 
+        if (Instance == null)
         {
             Instance = this;
         }
@@ -17,19 +17,21 @@ public class InputManager : MonoBehaviour
         gameControls.PlayerTwo.Enable();
     }
 
-    public float GetMovementVector(string tag)
+    public Vector2 GetMovementVector2D(int playerType)
     {
-        float inputVector = 0f;
+        Vector2 inputVector = new Vector2();
 
-        if (tag == PlayerType.PlayerOne)
+        switch (playerType)
         {
-            inputVector = gameControls.PlayerOne.Walk.ReadValue<float>();
+            case 0:
+                inputVector = gameControls.PlayerOne.Walk.ReadValue<Vector2>();
+                break;
+            case 1:
+                inputVector = gameControls.PlayerTwo.Walk.ReadValue<Vector2>();
+                break;
         }
-        if (playerType == PlayerType.PlayerTwo)
-        {
-            inputVector = gameControls.PlayerTwo.Walk.ReadValue<float>();
-        }
-        return inputVector;
+
+        return inputVector.normalized;
     }
 
 }

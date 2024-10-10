@@ -31,7 +31,7 @@ public partial class @GameControls: IInputActionCollection2, IDisposable
                     ""name"": ""Walk"",
                     ""type"": ""Value"",
                     ""id"": ""ecf975c8-4464-456a-b604-8ba6e4549470"",
-                    ""expectedControlType"": ""Axis"",
+                    ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
@@ -39,9 +39,9 @@ public partial class @GameControls: IInputActionCollection2, IDisposable
             ],
             ""bindings"": [
                 {
-                    ""name"": ""AD [Keyboard]"",
+                    ""name"": ""WASD [Keyboard]"",
                     ""id"": ""b6df2781-f2fd-4491-8f02-95af4ff90424"",
-                    ""path"": ""1DAxis"",
+                    ""path"": ""2DVector"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -50,8 +50,30 @@ public partial class @GameControls: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": ""negative"",
+                    ""name"": ""Up"",
                     ""id"": ""59abd1a0-bbb5-4e34-8a20-66dfb9b462d9"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Walk"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""Down"",
+                    ""id"": ""1f819a50-5120-4d49-a379-86744c372887"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Walk"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""Left"",
+                    ""id"": ""2af624ba-b25a-4340-9f6f-d04b56070052"",
                     ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -61,8 +83,8 @@ public partial class @GameControls: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": ""positive"",
-                    ""id"": ""1f819a50-5120-4d49-a379-86744c372887"",
+                    ""name"": ""Right"",
+                    ""id"": ""f1c86073-e877-4489-8e5c-2a669265a022"",
                     ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -81,7 +103,7 @@ public partial class @GameControls: IInputActionCollection2, IDisposable
                     ""name"": ""Walk"",
                     ""type"": ""Value"",
                     ""id"": ""cd4ad7f2-e1aa-415b-852f-5fdb414c689d"",
-                    ""expectedControlType"": ""Axis"",
+                    ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
@@ -89,9 +111,9 @@ public partial class @GameControls: IInputActionCollection2, IDisposable
             ],
             ""bindings"": [
                 {
-                    ""name"": ""1D Axis"",
+                    ""name"": ""2D Vector"",
                     ""id"": ""b04588b2-0f3a-43f7-a0b4-a26cfd252f6c"",
-                    ""path"": ""1DAxis"",
+                    ""path"": ""2DVector"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -100,8 +122,30 @@ public partial class @GameControls: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": ""negative"",
+                    ""name"": ""Up"",
                     ""id"": ""1f8f7d1a-c95c-4569-8656-4ad6ca2211d9"",
+                    ""path"": ""<Keyboard>/upArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Walk"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""Down"",
+                    ""id"": ""4fff834c-4773-43a2-9dc9-bcf3f21534f9"",
+                    ""path"": ""<Keyboard>/downArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Walk"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""Left"",
+                    ""id"": ""2d2471a5-0a39-486d-b2dd-2c3201d43899"",
                     ""path"": ""<Keyboard>/leftArrow"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -111,8 +155,8 @@ public partial class @GameControls: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": ""positive"",
-                    ""id"": ""4fff834c-4773-43a2-9dc9-bcf3f21534f9"",
+                    ""name"": ""Right"",
+                    ""id"": ""2fd08e44-3904-45d7-aedd-0c2ce23cac89"",
                     ""path"": ""<Keyboard>/rightArrow"",
                     ""interactions"": """",
                     ""processors"": """",

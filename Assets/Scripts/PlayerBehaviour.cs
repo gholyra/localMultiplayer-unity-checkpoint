@@ -1,6 +1,4 @@
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 [System.Flags]
 public enum PlayerType
@@ -16,12 +14,26 @@ public class PlayerBehaviour : MonoBehaviour
 
     private Vector2 moveDirection;
     private Rigidbody2D rigidBody;
+    private int playerType;
 
     private void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
+        }
+        rigidBody = GetComponent<Rigidbody2D>();
+    }
+
+    private void Start()
+    {
+        if (this.gameObject.CompareTag("PlayerOne"))
+        {
+            playerType = 0;
+        }
+        else if (this.gameObject.CompareTag("PlayerTwo"))
+        {
+            playerType = 1;
         }
     }
 
@@ -32,9 +44,11 @@ public class PlayerBehaviour : MonoBehaviour
 
     private void HandleWalk()
     {
-        float inputValue = InputManager.Instance.GetMovementVector();
+        Vector2 inputValue = InputManager.Instance.GetMovementVector2D(playerType);
 
-        moveDirection.x = inputValue;
-        rigidBody.velocity = new Vector2(moveDirection.x * velocity, rigidBody.velocity.y);
+        moveDirection.x = inputValue.x;
+        moveDirection.y = inputValue.y;
+        
+        rigidBody.velocity = new Vector2(moveDirection.x * velocity, moveDirection.y * velocity);
     }
 }
